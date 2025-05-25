@@ -47,6 +47,7 @@ body {
 
 .navbar ul li a:hover {
   color: #ffb703;
+  animation: none;
 }
 
 
@@ -91,13 +92,25 @@ body {
   background-color: crimson;
             transform: scale(1.1);
 }
-
-.features {
-  display: flex;
-
+.feature-logo{
+  
+ margin-bottom: 40px;
+  font-size: 4em;
+  color: #d90429;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.features-list{
+display: flex;
+margin-top: 10px;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 70px 20px;
+  
+  background: #fff0f0;
+}
+.features {
+  margin-top: 30px;
+  text-align: center;
+  padding: 60px 20px;
   background: #fff0f0;
 }
 
@@ -259,6 +272,37 @@ footer {
 }
 .hero-content{
   animation: animate 1s linear;
+}
+.feature,.how-it-works,.download-app,.feedback{
+animation: scroll-animation linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+@keyframes scroll-animation{
+  0%{
+    opacity: 0;
+    scale: 0;
+  }
+  25%{
+    opacity: 0.25;
+    scale: 0.25;
+  }
+  50%{
+    opacity: 0.5;
+    scale: 0.5 ;
+  }
+  75%{
+    opacity: 0.75;
+    scale: 0.75;
+  }
+  100%{
+    opacity: 1;
+    scale: 1;
+  }
+}
+.option:hover{
+  transition: transform 0s;
+  transform: translateY(-5px);
 }
 
 
